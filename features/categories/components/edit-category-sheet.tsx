@@ -26,7 +26,7 @@ export const EditCategorySheet = () => {
 
   const [ConfirmDialog, confirm] = useConfirm(
     'Are your sure',
-    'Your are about to delete this transaction'
+    'Your are about to delete this category.'
   );
 
   const categoryQuery = useGetCategory(id);
