@@ -14,14 +14,14 @@ import { AccountForm } from '@/features/accounts/components/account-form';
 import { useOpenAccount } from '@/features/accounts/hooks/use-open-account';
 import { useGetAccount } from '@/features/accounts/api/use-get-account';
 import { useEditAccount } from '@/features/accounts/api/use-edit-account';
-import { useDeleteAccount } from '../api/use-delete-account';
+import { useDeleteAccount } from '@/features/accounts/api/use-delete-account';
 import { useConfirm } from '@/hooks/use-confirm';
 
 const formSchema = insertAccountSchema.pick({ name: true });
 
 type FormValues = z.input<typeof formSchema>;
 
-export const EditAccountSheet = () => {
+export const EditTransactionSheet = () => {
   const { isOpen, onClose, id } = useOpenAccount();
 
   const [ConfirmDialog, confirm] = useConfirm(
